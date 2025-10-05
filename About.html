@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patcha SAU - About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        :root {
+            --primary-color: #f7a000;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --secondary-text-color: #aaaaaa;
+            --border-radius-circle: 50%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter';
+            background-color: var(--background-color);
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #FFE207;
+        }
+
+        .header {
+            background-color: var(--background-color);
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-size: 1rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            font-weight: 500;
+            margin: 0 120px;
+        }
+
+        .nav-links a.highlight-link {
+            color: #FFE207;
+            opacity: 1;
+            font-weight: 600;
+        }
+
+        .nav-links a.active {
+            opacity: 1;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            background-color: transparent;
+        }
+
+        .btn-primary:hover {
+            border-color: #ffffff;
+            color: #FFFFFF;
+        }
+
+        .hero-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 50px;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 80px;
+            flex-grow: 1;
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 50px;
+            font-family: 'Lora';
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .text-content p {
+            font-size: 20px;
+            font-family: 'Inter';
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+
+        .text-content p strong {
+            color: var(--text-color);
+            font-weight: normal;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links i {
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+
+        .social-links i:hover {
+            color: var(--primary-color);
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 300px;
+            height: 300px;
+            border-radius: var(--border-radius-circle);
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.05);
+        }
+
+        .tech-stacks {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .tech-stacks h2 {
+            font-size: 20px;
+            font-family: 'Inter';
+            font-weight: normal;
+            margin-bottom: 40px;
+            color: var(--secondary-text-color);
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .tech-icons img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: transform 0.2s;
+        }
+
+        .tech-icons img:hover {
+            transform: scale(1.15);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .about-section {
+            width: 100%;
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .about-left {
+            flex: 1;
+        }
+
+        .about-left h2 {
+            font-family: 'Lora';
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .abstract-graphic {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-top: 50px;
+        }
+
+        .color-blob {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(20px) contrast(20);
+            mix-blend-mode: screen;
+            transform: scale(1.1);
+        }
+
+        .color-blob::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            transform: rotate(30deg) scale(0.8);
+        }
+
+        .color-blob::after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 90px;
+            height: 90px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            transform: rotate(-15deg) scale(0.9);
+        }
+
+        .about-right {
+            flex: 2;
+            padding-top: 30px;
+        }
+
+        .about-intro {
+            font-size: 20px;
+            font-family: 'Lora';
+            font-weight: bold;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .about-detail {
+            font-size: 18px;
+            font-family: 'Inter';
+            color: #FFFFFFB2;
+        }
+
+        .btn-cv {
+            display: inline-block;
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            margin-top: 40px;
+            background-color: transparent;
+        }
+
+        .btn-cv:hover {
+            background-color: #668aecb6;
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 1024px) {
+            .about-left h2 {
+                font-size: 3rem;
+            }
+
+            .about-content {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 50px 0;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .about-left {
+                order: 1;
+            }
+
+            .about-right {
+                order: 2;
+                padding-top: 0;
+                text-align: left;
+            }
+
+            .about-left h2 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            .abstract-graphic {
+                margin: 0 auto 30px auto;
+            }
+
+            .btn-cv {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <div class="logo">Patcha SAU</div>
+            <nav class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="About.html" class="highlight-link">About</a> <a href="Portfolio.html">Portfolio</a>
+            </nav>
+            <a href="Let's talk.html" class="btn-primary">Let's talk</a>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container about-content">
+
+            <div class="about-left">
+                <h2>About Me</h2>
+                <div class="abstract-graphic">
+                    <img src="./images/loader_01.png" alt="loader_01" title="loader_01">
+                </div>
+            </div>
+
+            <div class="about-right">
+                <p class="about-intro">
+                    Hi, I'm Patcha SAU. A passionate Front-end Web <br> Developer based in Thailand.
+                </p>
+                <p class="about-detail">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem odit labore unde nemo omnis
+                    sequi hic sit laudantium repellendus recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+                    consequuntur velit nesciunt aperiam odit excepturi repellat libero in enim praesentium! Ex dicta est
+                    suscipit ipsam voluptate tempora voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+                    autem deserunt asperiores vitae ea, libero sed! Libero fugit non, placeat nulla quae odio asperiores
+                    ratione! Accusantium placeat dolorem minus eos excepturi modi.
+                </p>
+
+                <a href="#" class="btn-cv">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

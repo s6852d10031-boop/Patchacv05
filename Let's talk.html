@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patcha SAU - Contact</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 0;
+            transition: color 0.3s;
+            margin: 0 120px;
+        }
+
+        .nav-links a:hover {
+            color: #cccccc;
+        }
+
+        .lets-talk-btn {
+            background-color: #ffffff00;
+            border: 1px solid #FFFFFF;
+            color: #e0a800;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .lets-talk-btn:hover {
+            background-color: #fff4d2;
+        }
+
+        .contact-section {
+            padding: 100px 80px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 50px;
+            font-family: 'Lora';
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        .connect-heading {
+            font-size: 30px;
+            font-family: 'Lora';
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        .connect-tagline {
+            font-size: 25px;
+            font-family: 'Inter';
+            font-style: bold;
+            margin-bottom: 80px;
+            color: #aaaaaa;
+        }
+
+        .contact-info-container {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 250px;
+        }
+
+        .contact-item-icon {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+        }
+
+        .icon-email {
+            background: radial-gradient(circle at 30% 30%, #ff6600, transparent),
+                radial-gradient(circle at 70% 70%, #888888, transparent);
+            opacity: 0.8;
+        }
+
+        .icon-location {
+            background-image: linear-gradient(to top right, #cccccc, #888888);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+        }
+
+        .icon-linkedin {
+            background-color: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            opacity: 0.9;
+        }
+
+        .contact-item p {
+            margin: 5px 0 0 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">Patcha SAU</div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Portfolio.html">Portfolio</a>
+        </nav>
+        <a href="Let's talk.html" class="lets-talk-btn">Let's talk</a>
+    </header>
+
+    <main class="contact-section">
+        <div class="contact-title">Contact</div>
+
+        <div class="connect-heading">Let's Connect</div>
+        <div class="connect-tagline">Don't be a stranger! Say hello and let's collaborate</div>
+
+        <div class="contact-info-container">
+
+            <div class="contact-item">
+                <img src="./images/Profile Icon.png" alt="Profile">
+                <p>Patcha@gmail.com</p>
+            </div>
+
+            <div class="contact-item">
+                <img src="./images/Group 510.png" alt="map">
+                <p>Thailand, Bangkok</p>
+            </div>
+
+            <div class="contact-item">
+                <img src="./images/Group 511.png" alt="Contact">
+                <p>Patcha SAU</p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patcha SAU - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        :root {
+            --primary-color: #f7a000;
+            --background-color: #000000;
+            --text-color: #ffffff;
+            --secondary-text-color: #aaaaaa;
+            --border-radius-circle: 50%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter';
+            background-color: var(--background-color);
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #FFE207;
+        }
+
+        .header {
+            background-color: var(--background-color);
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-size: 1rem;
+            color: #FFFFFF;
+            margin: 0 120px;
+        }
+
+        .nav-links a.active {
+            color: #FFE207;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            border: 1px solid var(--text-color);
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            border-color: #FFFFFF;
+            color: #aaaaaa;
+        }
+
+        .hero-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 50px;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 80px;
+            flex-grow: 1;
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            font-size: 50px;
+            font-family: 'Lora';
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .text-content p {
+            font-size: 20px;
+            font-family: 'Inter';
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+
+        .text-content p strong {
+            color: var(--text-color);
+            font-weight: normal;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links i {
+            font-size: 2rem;
+            color: var(--text-color);
+        }
+
+        .social-links i:hover {
+            color: var(--primary-color);
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 300px;
+            height: 300px;
+            border-radius: var(--border-radius-circle);
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.05);
+        }
+
+        .tech-stacks {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .tech-stacks h2 {
+            font-size: 20px;
+            font-family: 'Inter';
+            font-weight: normal;
+            margin-bottom: 40px;
+            color: var(--secondary-text-color);
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .tech-icons img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: transform 0.2s;
+        }
+
+        .tech-icons img:hover {
+            transform: scale(1.15);
+        }
+
+        @media (max-width: 1024px) {
+            .text-content h1 {
+                font-size: 3rem;
+            }
+
+            .avatar-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .avatar {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .nav-links {
+                order: 3;
+                margin-top: 15px;
+            }
+
+            .btn-primary {
+                order: 2;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .text-content {
+                max-width: 100%;
+                order: 2;/
+            }
+
+            .text-content h1 {
+                font-size: 2.5rem;
+                font-family: 'Lora';
+            }
+
+            .text-content p {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .avatar-container {
+                order: 1;
+                margin-bottom: 40px;
+            }
+
+            .tech-icons {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <div class="logo">Patcha SAU</div>
+            <nav class="nav-links">
+                <a href="Home.html" class="active">Home</a>
+                <a href="About.html">About</a>
+                <a href="Portfolio.html">Portfolio</a>
+            </nav>
+            <a href="Let's talk.html" class="btn-primary">Let's talk</a>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="container hero-content">
+            <div class="text-content">
+                <h1>Frontend web developer !</h1>
+                <p>Hi, I'm Patcha SAU. A passionate Front-end <br> Web Developer based in Thailand.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="avatar-container">
+                <img src="./images/stam.jpg" alt="Profile Picture of Patcha SAU" class="avatar">
+            </div>
+        </div>
+
+        <section class="tech-stacks">
+            <h2>My Tech Stacks</h2>
+            <div class="tech-icons">
+                <img src="./images/HTML.png" alt="HTML5" title="HTML5">
+                <img src="./images/CSS3.png" alt="CSS3" title="CSS3">
+                <img src="./images/JavaSc.png" alt="JavaScript" title="JavaScript">
+                <img src="./images/Node..png" alt="Node.js" title="Node.js">
+                <img src="./images/React.png" alt="React" title="React">
+                <img src="./images/Vue.js.png" alt="Vue.js" title="Vue.js">
+                <img src="./images/Java.png" alt="Java" title="Java">
+                <img src="./images/Figma.png" alt="Figma" title="Figma">
+                <img src="./images/Fireba.png" alt="Firebase" title="Firebase">
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
